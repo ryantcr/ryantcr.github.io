@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <!-- BEGIN HEAD -->
+    <head>
+        <meta charset="utf-8" />
+        <title>Ryan TCR</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+        <meta content="Ryan TCR Dev.IT" name="description" />
+        <meta content="ryantcr" name="author" />
+        <link rel="icon" href="assets/img/fav-icon.png" type="image/png">
+
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+        <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CM9JMBC0FL"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-CM9JMBC0FL');
+        </script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8778948199297228"
+     crossorigin="anonymous"></script>
+    </head>
+        <!-- END HEAD -->
+        <body>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="./maintain.jpg" class="img-fluid" style="width:100%;height:96vh;object-fit:contain">
+                    </div>
+                </div>
+                <!--/end row-->
+                <div class="page-footer text-right">
+                    <text> Under Maintenance @ Ryan TCR &copy; <span class="site-year"></span> </text>
+                </div>
+            </div>
+            <!--[if lt IE 9]>
+            <script src="assets/js/respond.min.js"></script>
+            <script src="assets/js/excanvas.min.js"></script>
+            <![endif]-->
+            <!-- BEGIN CORE PLUGINS -->
+            <script src="assets/js/jquery.min.js" type="text/javascript"></script>
+            <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+            <script>
+            $(document).ready(function () {
+                var _this_year = (new Date()).getFullYear();
+                $('.site-year').html(_this_year);
+            });
+            </script>
+        </body>
+    </html>

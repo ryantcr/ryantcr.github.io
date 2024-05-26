@@ -1,0 +1,88 @@
+@keyframes animatedBackground {
+  0% { background-position: 0 center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+body {
+  padding: 0;
+  margin: 0; 
+  /* background-image: url(../img/coming-soon-wide.png);
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: animatedBackground 20s linear infinite; */
+}
+
+.coming-soon-header {
+  padding: 20px;
+  margin-top: 80px; 
+}
+
+.coming-soon-content {
+  padding: 20px;
+  margin-top: 10px; 
+  text-align: center;
+}
+
+.coming-soon-content h1,
+.coming-soon-content p {
+  color: #fff; 
+}
+.coming-soon-content img{
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 100%!important;
+}
+
+.coming-soon-content h1 {
+  font-size: 36px;
+  line-height: 50px;
+  margin-bottom: 20px;
+  font-weight: 300; 
+  text-shadow: 1px 1px 20px black;
+}
+
+.coming-soon-content p {
+  font-size: 14px; 
+  margin-bottom: 60px;
+}
+
+.coming-soon-content .socicons a{
+  margin: 20px 10px;
+}
+
+.page-footer{  
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+}
+
+.page-footer text{
+  color:white;
+}
+
+/*Responsive*/
+@media (max-width: 1024px) {
+  #defaultCountdown span.countdown_amount {
+    padding: 10px; 
+  } 
+}
+
+@media (max-width: 767px) {
+  .coming-soon-header,
+  .coming-soon-countdown,
+  .coming-soon-content,
+  .coming-soon-footer {
+    margin-top: 0px;
+    padding: 10px; 
+  } 
+}
+
+@media (max-width: 320px) {
+  .coming-soon-content .btn-subscribe span {
+    display: none; 
+  } 
+}

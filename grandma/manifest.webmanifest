@@ -1,0 +1,15 @@
+{
+    "background_color": "purple",
+    "description": "外婆 永远滴神",
+    "display": "fullscreen",
+    "icons": [
+        {
+            "src": "fav-icon.png",
+            "sizes": "200x200",
+            "type": "image/png"
+        }
+    ],
+    "name": "外婆专辑",
+    "short_name": "外婆",
+    "start_url": "/grandma/"
+}
