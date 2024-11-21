@@ -18,17 +18,113 @@
         body {
             background: #111;
         }
+
+        #ytbWrap {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+
+        button {
+            font-weight: bold;
+            font-size: 48px !important;
+        }
     </style>
 </head>
 
 <body>
-    <iframe width="100vw" height="100vh" src="https://www.youtube.com/embed/vecx8Mx_p6c?loop=1&autoplay=1"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <section class="section">
+        <div class="ytbList">
+            <div class="column">
+                <button id="btn0" data-val="Grandma" class="button is-fullwidth is-success is-large is-outlined">
+                    (0) 已故 劉亞枝 三時繫念
+                </button>
+            </div>
+            <div class="column">
+                <button id="btn1" data-val="DaAi1" class="button is-fullwidth is-success is-large is-outlined">
+                    (1) 慈济大愛一臺 HD Live
+                </button>
+            </div>
+            <div class="column">
+                <button id="btn2" data-val="DaAi2" class="button is-fullwidth is-success is-large is-outlined">
+                    (2) 慈济大愛二臺 HD Live
+                </button>
+            </div>
+            <div class="column">
+                <button id="btn3" data-val="DaAi3" class="button is-fullwidth is-success is-large is-outlined">
+                    (3) 慈济大爱台 热门视频
+                </button>
+            </div>
+            <div class="column">
+                <button id="btn4" data-val="LifeTv1" class="button is-fullwidth is-success is-large is-outlined">
+                    (4) 生命电视台 一号
+                </button>
+            </div>
+            <div class="column">
+                <button id="btn5" data-val="LifeTv2" class="button is-fullwidth is-success is-large is-outlined">
+                    (5) 生命电视台 二号
+                </button>
+            </div>
+            <div class="column">
+                <button id="btn6" data-val="Amtb" class="button is-fullwidth is-success is-large is-outlined">
+                    (6) 净宗学会
+                </button>
+            </div>
+            <div class="column">
+                <button id="btn7" data-val="BaoEn" class="button is-fullwidth is-success is-large is-outlined">
+                    (7) 报恩讲堂
+                </button>
+            </div>
+            <div class="column">
+                <button id="btn8" data-val="HuiGuangFJ" class="button is-fullwidth is-success is-large is-outlined">
+                    (8) 慧光法师 福建话
+                </button>
+            </div>
+            <div class="column">
+                <button id="btn9" data-val="HuiGuangKaiShi" class="button is-fullwidth is-success is-large is-outlined">
+                    (9) 【佛法开示】慧光长老
+                </button>
+            </div>
+        </div>
+        <div class="columns">
+            <h1 class="msg"></h1>
+        </div>
+    </section>
 </body>
 <script type="text/javascript">
     'use strict';
+
+    const ytbList = {
+        "DaAi1": "https://www.youtube.com/watch?v=MIqUplvSRWA",
+        "DaAi2": "https://www.youtube.com/watch?v=DTNkEm6jaqQ",
+        "DaAi3": "https://www.youtube.com/playlist?list=PLYfJOvcvKb2SqAkqFswB6jC3yBPzf6YoD",
+        "LifeTv1": "https://www.youtube.com/user/lifetv01",
+        "LifeTv2": "https://www.youtube.com/user/lifetv02",
+        "Amtb": "https://www.youtube.com/watch?v=LuomVsFAFpg",
+        "BaoEn": "https://www.youtube.com/channel/UCJZyCP9RSE8bLJ1n4lqa1DQ",
+        "ZhouXuan": "https://www.youtube.com/watch?v=4zPOUYMapwA&list=OLAK5uy_kK5_CnE8UI3sODaOY61uJBp7x1wpZw_XM",
+        "HuiGuangFJ": "https://www.youtube.com/watch?v=e4bVYtqaDbs&list=PLFwzvnas-z3QSCJl6ZJ0zxNyiFB-i0Z8o&index=1",
+        "HuiGuangKaiShi": "https://www.youtube.com/watch?v=QQILIx7q_-k&list=PLLD1h7vnArZXbtPE4pmuKQaRGV6JPbdBz&index=1",
+        "Grandma": "https://youtu.be/vecx8Mx_p6c"
+    };
+    // $.getJSON("grandmom.json", function (resp) { ytbList = resp; });
+
+    document.onkeydown = function (e) {
+        e = e || window.event;
+        $(".msg").text(e.charCode + ',' + e.code + ',' + e.key);
+        let ytb_tag = $("#btn" + e.code).data('val') || $("#btn" + e.key).data('val');
+        if (ytbList[ytb_tag]) {
+            window.location.href = ytbList[ytb_tag];
+        }
+    }
+
+    $("button").bind("click", function (e) {
+        let ytb_tag = $(this).data('val');
+        window.location.href = ytbList[ytb_tag];
+    });
 </script>
 
 </html>
